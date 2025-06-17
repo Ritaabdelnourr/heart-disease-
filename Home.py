@@ -4,7 +4,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from pathlib import Path
+from pathlib import Path  
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
@@ -117,5 +117,5 @@ elif page == "Bleeding predictor":
                    "(logistic regression with age, sex, smoker)")
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Data source: open_heart_public.xlsx  •  "
+st.sidebar.caption("Data source: heart disease.xlsx  •  "
                    "Dashboard built with Streamlit")
