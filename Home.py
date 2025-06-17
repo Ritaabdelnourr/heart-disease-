@@ -12,9 +12,12 @@ st.set_page_config("Open-Heart Surgery Dashboard", "❤️", layout="wide")
 
 # ---------- 1. Load the cleaned public dataset ------------------
 @st.cache_data
+@st.cache_data
 def load_data():
-    data_path = Path(__file__).parents[1] / "data/open_heart_public.xlsx"
+    # file lives in the same directory as Home.py
+    data_path = Path(__file__).parent / "heart disease.xlsx"
     return pd.read_excel(data_path)
+
 
 df = load_data()
 
